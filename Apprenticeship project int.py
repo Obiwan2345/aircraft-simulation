@@ -34,6 +34,9 @@ while True:
     net_force = thrust - drag - rolling_resistance
     acceleration = net_force / mass
 
+    #Calculate Distance
+    distance = v * time
+
     # Update velocity and time
     v += acceleration * dt
     time += dt
@@ -41,6 +44,10 @@ while True:
     #If the lift is greater than the weight, the plane will take off
     if lift >= weight:
         print(f"Takeoff at {v:.2f} m/s after {time:.2f} seconds.")
+        break
+    #If the distance needed to take off is greater than the runway length, takeoff wont be possible
+    if distance > 13000: #realistic runway length
+        print("Takeoff can't be accomplished")
         break
 
 #store data
