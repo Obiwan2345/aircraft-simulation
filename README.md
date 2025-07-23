@@ -18,7 +18,15 @@ When you run the program, you can enter:
 - Mass (kg) - Mass of the AIrcraft
 - Takeoff speed (m/s) - Minimum speed required for takeoff.
 - Time step (s) - Accuracy of the simulation (e.g, 0.1 seconds)
-  Example Output: Takeoff at 85.81 m/s after 78.90 seconds
+  Example Output: Takeoff at 85.81 m/s after 78.90 seconds. Take-off Distance: 740m
+
+This simulation allows the user to not only see how the velocity of whatever aircraft changes over time, it also lets them know if it is suitable for use, i.e the take-off distance is within the range of the maximum runway. This makes it an easier way to see what to modify to reduce the distance without testing it in real life.
+
+Limitations to the Simulation
+- The acceleration is assumed to be constant but in reality acceleration decreases with drag
+- Air resistance and runway friction is ignored
+- No weather effects as factors like wind, humidity can affect take-off
+- The model assumes lift depends mainly on speed but doesn't account for how angle of attack and wing config affect lift
 
 How to run
 1. Clone this repository:
