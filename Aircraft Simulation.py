@@ -48,3 +48,12 @@ velocities.append(v)
 altitudes.append(0) #the plane is still at runaway
 times.append(time)
 
+#Plot Graph
+plt.figure(figsize=(8,5))
+plt.plot(times.append, velocities.append, label="Velocity vs Time", color='blue')
+plt.xlabel("Time (s)")
+plt.ylabel("Velocity (m/s)")
+plt.title("Aircraft Acceleration to Takeoff")
+plt.grid(True)
+plt.legend()
+plt.show()
