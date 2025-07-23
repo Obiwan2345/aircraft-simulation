@@ -40,10 +40,6 @@ while True:
     v += acceleration * dt
     time += dt
     
-#store data
-velocities.append(v)
-times.append(time)
-
     #If the lift is greater than the weight, the plane will take off
     if lift >= weight:
         print(f"Take-off at {v:.2f} m/s after {time:.2f} seconds.")
@@ -53,6 +49,9 @@ times.append(time)
     if distance > 13000: #realistic runway length
         print(f"Take-off can't be accomplished as the plane travelled {distance:.2f} m, but the maximum runway length is 13000m")
         break
+#store data
+velocities.append(v)
+times.append(time)
 
 #Plot Graph
 plt.figure(figsize=(8,5))
