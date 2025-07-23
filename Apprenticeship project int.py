@@ -1,5 +1,5 @@
-    #Simulating Velocity and Altitude of an Aircraft over a given time
-import matplotlib as plt
+    # Simulating Velocity and Take-off Distance of an Aircraft over a given time
+import matplotlib.pyplot as plt
 #constants
 g = 9.81 #gravity
 rho = 1.225 #air density
@@ -13,14 +13,12 @@ C_D = float(input("Enter the drag coefficient: ")) # drag coefficient
 
 # Initial Values
 v = 0 # velocity in (m/s)
-altitude = 0 # altitude in (m)
 dt = 0.1 # time step (s)
 time = 0 # initial time (s)
-distance = 0 #initial distance (m)
+distance = 0 # initial distance
 
 #Results tracker for plotting
 velocities = []
-altitudes = []
 times = []
 
 while True:
@@ -35,8 +33,8 @@ while True:
     net_force = thrust - drag - rolling_resistance
     acceleration = net_force / mass
 
-    #Calculate Distance
-    distance += v * time
+    #update distance
+    distance += v * dt
 
     # Update velocity and time
     v += acceleration * dt
@@ -44,24 +42,24 @@ while True:
 
     #If the lift is greater than the weight, the plane will take off
     if lift >= weight:
-        print(f"Takeoff at {v:.2f} m/s after {time:.2f} seconds.")
+        print(f"Take-off at {v:.2f} m/s after {time:.2f} seconds.")
+        print(f"Take-off distance: {distance:.2f}m")
         break
-    #If the distance needed to take off is greater than the runway length, takeoff wont be possible
+    # Check take-off distance
     if distance > 13000: #realistic runway length
-        print(f"Takeoff can't be accomplished as the plane travelled {distance:.2f"} m, and the maximum runway length is 13000m")
+        print(f"Take-off can't be accomplished as the plane travelled {distance:.2f} m, but the maximum runway length is 13000m")
         break
-
 #store data
 velocities.append(v)
-altitudes.append(0) #the plane is still at runaway
 times.append(time)
 
 #Plot Graph
 plt.figure(figsize=(8,5))
-plt.plot(times.append, velocities.append, label="Velocity vs Time", color='blue')
+plt.plot(times, velocities, label="Velocity vs Time", color='blue')
 plt.xlabel("Time (s)")
 plt.ylabel("Velocity (m/s)")
 plt.title("Aircraft Acceleration to Takeoff")
 plt.grid(True)
 plt.legend()
 plt.show()
+
