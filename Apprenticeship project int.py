@@ -1,4 +1,4 @@
-    #Simulating Velocity and Altitude of an Airbus A350-100 over a given time
+    #Simulating Velocity and Altitude of an Aircraft over a given time
 import matplotlib as plt
 #constants
 g = 9.81 #gravity
