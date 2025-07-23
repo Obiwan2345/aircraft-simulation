@@ -1,5 +1,5 @@
     #Simulating Velocity and Altitude of an Airbus A350-100 over a given time
-
+import matplotlib.pyplot as plt
 #constants
 g = 9.81 #gravity
 rho = 1.225 #air density
