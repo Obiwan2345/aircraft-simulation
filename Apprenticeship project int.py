@@ -16,6 +16,7 @@ v = 0 # velocity in (m/s)
 altitude = 0 # altitude in (m)
 dt = 0.1 # time step (s)
 time = 0 # initial time (s)
+distance = 0 #initial distance (m)
 
 #Results tracker for plotting
 velocities = []
@@ -35,7 +36,7 @@ while True:
     acceleration = net_force / mass
 
     #Calculate Distance
-    distance = v * time
+    distance += v * time
 
     # Update velocity and time
     v += acceleration * dt
@@ -47,7 +48,7 @@ while True:
         break
     #If the distance needed to take off is greater than the runway length, takeoff wont be possible
     if distance > 13000: #realistic runway length
-        print("Takeoff can't be accomplished")
+        print(f"Takeoff can't be accomplished as the plane travelled {distance:.2f"} m, and the maximum runway length is 13000m")
         break
 
 #store data
