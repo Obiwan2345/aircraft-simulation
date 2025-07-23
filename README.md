@@ -9,6 +9,7 @@ It calculates how long it takes for a plane to reach takeoff speed and plots the
 #How it works
 - The simulation uses Newton's 2nd Law (F = m*a) to calculate the acceleration.
 - It updates the velocity and time step-by-step until the aircraft reaches it's takeoff speed
+- It calculates the distance travelled and tells the user if the distance is longer than the maximum runway 
 
 #User input
 When you run the program, you can enter:
