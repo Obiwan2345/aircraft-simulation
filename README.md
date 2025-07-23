@@ -1,4 +1,4 @@
-This project is a simple Python simulation that models the takeoff of an Aircreft.
+This project is a simple Python simulation that models the takeoff of an Aircraft.
 It calculates how long it takes for a plane to reach takeoff speed and plots the velocity against time graph.
 
 Feautres
