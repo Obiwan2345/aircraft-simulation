@@ -1,5 +1,5 @@
     #Simulating Velocity and Altitude of an Airbus A350-100 over a given time
-
+import matplotlib as plt
 #constants
 g = 9.81 #gravity
 rho = 1.225 #air density
@@ -48,3 +48,12 @@ velocities.append(v)
 altitudes.append(0) #the plane is still at runaway
 times.append(time)
 
+#Plot Graph
+plt.figure(figsize=(8,5))
+plt.plot(times.append, velocities.append, label="Velocity vs Time", color='blue')
+plt.xlabel("Time (s)")
+plt.ylabel("Velocity (m/s)")
+plt.title("Aircraft Acceleration to Takeoff")
+plt.grid(True)
+plt.legend()
+plt.show()
