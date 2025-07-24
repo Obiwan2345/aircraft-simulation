@@ -8,7 +8,7 @@
 
 # How it works
 - The simulation uses Newton's 2nd Law (F = m*a) to calculate the acceleration.
-- It updates the velocity and time step-by-step until the aircraft reaches it's takeoff speed
+- It updates the velocity and time, step-by-step until the aircraft reaches it's takeoff speed
 - It calculates the distance travelled and tells the user if the distance is longer than the maximum runway 
 
 # User input
@@ -23,7 +23,6 @@ When you run the program, you can enter:
 This simulation allows the user to not only see how the velocity of whatever aircraft changes over time, it also lets them know if it is suitable for use, i.e the take-off distance is within the range of the maximum runway. This makes it an easier way to see what to modify to reduce the distance without testing it in real life.
 
 # Limitations to the Simulation
-- The acceleration is assumed to be constant but in reality acceleration decreases with drag
 - Air resistance and runway friction is ignored
 - No weather effects as factors like wind, humidity can affect take-off
 - The model assumes lift depends mainly on speed but doesn't account for how angle of attack and wing config affect lift
