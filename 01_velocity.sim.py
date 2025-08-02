@@ -100,6 +100,8 @@ def show_plot():
 
 # GUI Setting
 root = tk.Tk()
+style = ttk.Style()
+style.configure('.', font=("Segoe UI", 11))
 root.title("Simulating Velocity, Time, and Distance of an Aircraft")
 root.geometry("420x240")
 
