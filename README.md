@@ -1,4 +1,4 @@
-**This project is a simple Python simulation that models the takeoff of an Aircraft.**
+**This project is a simple Python simulation that models the takeoff of an Aircraft using tkinter and matplotlib.**
 **It calculates how long it takes for a plane to reach takeoff speed and plots the velocity against time graph.**
 **It also calculates the altitude of the plane after take-off for 100s and plots the altitude against time graph**
 
@@ -7,6 +7,7 @@
 - Calculates the altitude of the aircraft (using the take-off velocity) after 100s.
 - Plots a graph of velocity vs time and altitude against time graph using matplotlib.
 - Fully interactive - allows user input for plane parameters.
+- Uses tkinter for User interface
 
 # How it works
 - The velocity simulation uses Newton's 2nd Law (F = m*a) to calculate the acceleration.
