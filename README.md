@@ -25,7 +25,7 @@ And for the Altitude simulation you input:
 - The take-off speed
 
 Example output for the velocity against time simulation: *Take-off speed is 60.80m/s after 24.21s. Travelled a distance of 748.1m* With a graph shown
-Example output for the altitude against time simulation *After 100s, the altitude of the plane is 234m*
+Example output for the altitude against time simulation *After 100s, the plane reached an altitude of 3402m* With a graph shown
 
 This simulation allows the user to not only see how the velocity of whatever aircraft changes over time, it also lets them know if it is suitable for use, i.e the take-off distance is within the range of the maximum runway. This makes it an easier way to see what to modify to reduce the distance without testing it in real life.
 
