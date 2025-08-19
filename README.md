@@ -41,4 +41,4 @@ git clone https://github.com/Obiwan2345/aircraft-simulation.git
 2. Install required library
 pip install matplotlib
 3.Run the simulation
-Python takeoff_simulation.py
+01_velocity.py or 02_altitude.py
